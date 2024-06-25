@@ -5,29 +5,25 @@
       "name": "client",
       "image": "chuckmdonaldson/multi-client",
       "hostname": "client",
-      "essential": false,
-      "memory": 128
+      "essential": false
     },
     {
       "name": "server",
       "image": "chuckmdonaldson/multi-server",
       "hostname": "api",
-      "essential": false,
-      "memory": 128
+      "essential": false
     },
     {
       "name": "worker",
       "image": "chuckmdonaldson/multi-worker",
       "hostname": "worker",
-      "essential": false,
-      "memory": 128
+      "essential": false
     },
     {
       "name": "nginx",
       "image": "chuckmdonaldson/multi-nginx",
       "hostname": "nginx",
       "essential": true,
-      "memory": 128,
       "portMappings": [
         {
           "hostPort": 80,
