@@ -1,4 +1,3 @@
-language: generic
 sudo: required
 services:
   - docker
@@ -20,14 +19,3 @@ after_success:
   - docker push chuckmdonaldson/multi-server
   - docker push chuckmdonaldson/multi-worker
 
-deploy:
-  provider: elasticbeanstalk
-  region: 'us-east-2'
-  app: 'multi-docker'
-  env: 'Multi-docker-env'
-  bucket_name: 'elasticbeanstalk-us-east-2-681603655492'
-  bucket_path: 'docker-multi'
-  on:
-    branch: master
-  access_key_id: $AWS_ACCESS_KEY
-  secret_access_key: $AWS_SECRET_KEY
